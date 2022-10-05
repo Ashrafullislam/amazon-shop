@@ -1,0 +1,31 @@
+/* header style  */
+
+.header{
+    background-color: #1C2B35;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.navbar{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+    cursor: pointer;
+    margin-left: 35px;
+
+}
+.menu a:hover{
+    color: blue;
+ 
+}

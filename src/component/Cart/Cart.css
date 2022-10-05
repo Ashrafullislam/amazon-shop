@@ -1,0 +1,35 @@
+.cart-container p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.order-check-btn{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.checkout-btn{
+  padding: 10px 0;
+  background-color: #FF9900 ;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  
+}
+.clear-cart-btn{
+background-color: #EB5757;
+padding: 10px 0;
+color: black;
+border-radius: 8px;
+cursor: pointer;
+
+}
+.clear-cart-btn:hover{
+ background-color: #f13e3e;
+
+}
+.checkout-btn:hover{
+    background-color: greenyellow;  
+}

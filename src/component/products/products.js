@@ -1,12 +1,16 @@
 import { click } from '@testing-library/user-event/dist/click';
-import React from 'react';
+
 import './products.css';
 
 const Products = (props) => {
-    // console.log(props.product);
-    const {AddToCartHandlar} = props; 
+
+    
+    //receved peremeter  add and delete function from Shop.js 
+    // return the perameter id to the shop.js onclik function
+    const {AddToCartHandlar,DeleteToCart} = props;
+  
      
-    const {name, price, ratings, seller, img }  = props.product;
+    const {name, price, ratings, seller, img,id }  = props.product;
 
     return (
         <div className='product'>
@@ -20,10 +24,13 @@ const Products = (props) => {
              <h4> Seller: {seller} </h4>
              <h4 className='ratings'> Ratings: {ratings} Stars </h4> 
             </div>
-           </div>;
+           </div>
 
            <div className='add-cart-btn'>
-           <button id='btn' onClick={() =>AddToCartHandlar(props.product)}  className='button-cart'> Add to Cart  </button> 
+            
+           <button  id='btn' onClick={() =>AddToCartHandlar(props.product)}  className='button-cart'> Add to Cart  </button>
+
+           <button className='button-cart' onClick={()=> DeleteToCart(id)}> Delete Cart </button>
              
            </div>  
         </div>

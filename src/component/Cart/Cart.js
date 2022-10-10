@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import { TrashIcon, } from '@heroicons/react/24/solid';
 
 import './Cart.css';
 
 const Cart = (props) => {
+  
+ 
+ 
     //cart return an array ,so apply the for loop to find the each item 
    const {cart} = props;
  
    let quantity = 0;
    let total = 0;
    let shipping = 0;
+
    //default quantity 0
 
    for( const item of cart){
@@ -16,7 +21,6 @@ const Cart = (props) => {
     quantity = quantity + item.quantity;
     total =   total + item.price  * item.quantity;
     shipping = shipping + item.shipping;
-    
    }
 
    // if need to show the tax with price 
@@ -35,7 +39,8 @@ const Cart = (props) => {
         
         <div className='order-check-btn'>
           <button   className='checkout-btn' > Proceed Checkout </button>
-          <button className='clear-cart-btn'> Clear Cart </button>
+
+          <button  className ='clear-cart-btn'> Clear Cart <TrashIcon className='delete-icon-cart'> </TrashIcon> </button>
         </div>
         
         </div>

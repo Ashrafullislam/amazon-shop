@@ -25,4 +25,25 @@
     
 }
 
-
+@media screen and (max-width: 992px ){
+    .shop-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .shop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 768px){
+    .shop-container{
+        display: grid;
+        grid-template-columns: 1fr;
+   }
+   .shop{
+    display: flex;
+    flex-direction: column;
+    
+    
+   }
+}

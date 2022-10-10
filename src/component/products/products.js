@@ -4,7 +4,6 @@ import './products.css';
 
 const Products = (props) => {
 
-    
     //receved peremeter  add and delete function from Shop.js 
     // return the perameter id to the shop.js onclik function
     const {AddToCartHandlar,DeleteToCart} = props;
@@ -26,8 +25,7 @@ const Products = (props) => {
             </div>
            </div>
 
-           <div className='add-cart-btn'>
-            
+           <div className='add-cart-btn'> 
            <button  id='btn' onClick={() =>AddToCartHandlar(props.product)}  className='button-cart'> Add to Cart  </button>
 
            <button className='button-cart' onClick={()=> DeleteToCart(id)}> Delete Cart </button>

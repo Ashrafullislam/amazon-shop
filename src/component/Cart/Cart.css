@@ -24,6 +24,9 @@ padding: 10px 0;
 color: black;
 border-radius: 8px;
 cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
 
 }
 .clear-cart-btn:hover{
@@ -32,4 +35,10 @@ cursor: pointer;
 }
 .checkout-btn:hover{
     background-color: greenyellow;  
+}
+.delete-icon-cart{
+    width: 20px;
+    color: rgba(12, 8, 8, 0.798);
+    margin-right: 5px;
+    height: 15px;
 }

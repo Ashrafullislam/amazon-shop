@@ -1,23 +1,19 @@
 
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import  { AddToLS, DeleteFromLs, getStoredCart } from '../AddToLS/AddToLS';
 import Cart from '../Cart/Cart';
 import Products from '../products/products';
-
 import './Shop.css';
 
 const Shop = () => {
+  const products = useLoaderData()
     // load data from json 
-    const [products,setProducts] = useState([]);
     const [cart,setCart] = useState([]);
     const [prices,setPrice] = useState([0]);
        
     //pass the product data to product.js file and receive it button 
-    const AddToCartHandlar = (product) => {
-      const [isActive,setIsActive] = useState(false);
-
-      setIsActive(current => !current); 
-      
+    const AddToCartHandlar = (product) => { 
         const {price,id } = product;
          
         let newCartFromLS = [];
@@ -32,7 +28,6 @@ const Shop = () => {
         exist.quantity = exist.quantity + 1;
         newCartFromLS = [...rest,exist]
       }
-
 
        // give the peremeter id to set LS 
          AddToLS(id)       
@@ -70,18 +65,17 @@ const Shop = () => {
         setCart(savedCart);
         
       }
-     
-      
      // products calls cases: every time call the useeffect and find the data
      //ekane products na dile ekbar call kore cole jabe,data pabena 
     },[products])
 
-    // load data from product.json 
-    useEffect(()=>{
-      fetch('product.json')
-      .then(res => res.json())
-      .then(data => setProducts(data))
-    },[])
+    
+    // // load data from product.json 
+    // useEffect(()=>{
+    //   fetch('product.json')
+    //   .then(res => res.json())
+    //   .then(data => setProducts(data))
+    // },[])
 
     return (
        <div className='shop'>

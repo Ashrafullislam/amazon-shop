@@ -17,8 +17,11 @@
     align-items: center;
     margin: 0 20px;
 }
+.order-text{
+    line-height: 18px;
+}
 .delete-icon{
-    width: 23px;
+    width: 35px;
     color: red;
     cursor: pointer;
     padding: 8px ;

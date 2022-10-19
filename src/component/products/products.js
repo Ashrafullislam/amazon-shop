@@ -1,4 +1,5 @@
 import { click } from '@testing-library/user-event/dist/click';
+import { useState } from 'react';
 
 import './products.css';
 
@@ -26,9 +27,9 @@ const Products = (props) => {
            </div>
 
            <div className='add-cart-btn'> 
-           <button  id='btn' onClick={() =>AddToCartHandlar(props.product)}  className='button-cart'> Add to Cart  </button>
+           <button  id='btn' onClick={() => AddToCartHandlar(props.product) }  className='button-cart'> Add to Cart  </button>
 
-           <button className='button-cart' onClick={()=> DeleteToCart(id)}> Delete Cart </button>
+           <button  className='button-cart' onClick={()=> DeleteToCart(id)}> Delete Cart </button>
              
            </div>  
         </div>

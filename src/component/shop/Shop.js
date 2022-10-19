@@ -6,16 +6,22 @@ import Cart from '../Cart/Cart';
 import Products from '../products/products';
 import './Shop.css';
 
-const Shop = () => {
+  const Shop = () => {
   const products = useLoaderData()
     // load data from json 
     const [cart,setCart] = useState([]);
     const [prices,setPrice] = useState([0]);
-       
+
+
+    // delete cart from calculate cart 
+    const DeleteCart = ()  => {
+      setCart([]);
+      DeleteFromLs();
+
+    }
     //pass the product data to product.js file and receive it button 
     const AddToCartHandlar = (product) => { 
         const {price,id } = product;
-         
         let newCartFromLS = [];
         const exist = cart.find(newProduct  => newProduct.id === id )
       // !not equal falsy 
@@ -23,6 +29,7 @@ const Shop = () => {
         product.quantity = 1;
         newCartFromLS = [...cart,product]
       } 
+
       else{
         const rest = cart.filter (newProduct => newProduct.id !== id)
         exist.quantity = exist.quantity + 1;
@@ -88,7 +95,7 @@ const Shop = () => {
        </div>
 
       <div className="cart-container">
-        <Cart cart={cart}> </Cart>
+        <Cart cart={cart} DeleteCart = {DeleteCart} > </Cart>
        </div>
    </div>
     );

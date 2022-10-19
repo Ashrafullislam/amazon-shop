@@ -27,11 +27,12 @@ const Order = () => {
                 > </ReviewProduct> )
               }
             </div>
+
              <div className="cart-container">
-              <Cart cart ={cart}>  </Cart>
+              <Cart cart ={cart}  >  </Cart>
              </div>
         </div>
-    );
+    )
 };
 
 export default Order;

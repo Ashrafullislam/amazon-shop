@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { Link} from 'react-router-dom';
 import { AuthContext } from '../../Contexts/UserContext';
+import google from '../../images/google.png';
 
 
 const SignUp = () => {
-const {CreateUser} = useContext(AuthContext);
+const {CreateUser,SignInWithGoogle} = useContext(AuthContext);
 const [success,setSuccess] = useState(null);
 const [error,setError] = useState(null);
 
@@ -36,17 +37,17 @@ const handleCreateUser = (event) => {
         <div className='form-container'>
             <h3> Sign up now  </h3>
             <form onSubmit={handleCreateUser } className='form'>
-            <div className='form-control'>
+            <div className='form-login'>
                 <label htmlFor="email" > Email</label>
                 <input type="email" name="email" id=""  required placeholder='Enter your email'/>
             </div>
 
-             <div className="form-control">
+             <div className="form-login">
               <label htmlFor="password"> Password</label>
               <input type="password" name='password' required  placeholder='Enter your password'/>
              </div>
 
-             <div className="form-control">
+             <div className="form-login">
               <label htmlFor="confirm-password"> Confirm Password</label>
               <input type="password" name='confirm' required  placeholder='Enter confirm password'/>
              </div>
@@ -57,8 +58,7 @@ const handleCreateUser = (event) => {
           
              <p> Already have an  acount ? <Link to = '/login' > Log in here</Link>  </p>
              <p>-------------------  Or -------------------</p>
-             <input className='btn-submit-google' type="submit" value='Sign Up with google' />
-
+              <button  onClick={SignInWithGoogle} className='google-sign ' > <img className='google' src={google } alt='google' />   </button>
             </form>
         </div>
     );

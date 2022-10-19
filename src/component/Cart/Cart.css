@@ -20,15 +20,15 @@
   
 }
 .clear-cart-btn{
-background-color: #EB5757;
-padding: 10px 0;
-color: black;
-border-radius: 8px;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
-
+    background-color: #EB5757;
+    padding: 10px 0;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 .clear-cart-btn:hover{
  background-color: #f13e3e;

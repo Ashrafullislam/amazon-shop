@@ -42,14 +42,14 @@ const handleLogIn = (event) => {
         <div className='form-container'>
             <h3> Log  in now </h3>
             <form onSubmit={handleLogIn} className='form'>
-            <div className='form-control'>
-                <label htmlFor="email" > Email</label>
+            <div className='form-login'>
+                <label htmlFor="email" > Email </label>
                 <input type="email" name="email" id=""  required placeholder='Enter your email'/>
 
             </div>
 
-             <div className="form-control">
-              <label htmlFor="password"> Password</label>
+             <div className="form-login">
+              <label htmlFor="password"> Password </label>
               <input type="password" name='password' required  placeholder='Enter your password'/>
              </div>
               {success && <span > {success} </span>  }

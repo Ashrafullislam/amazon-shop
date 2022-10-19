@@ -17,25 +17,29 @@
     align-items: center;
  
 }
+.nav{
+    width: 100%;
+    height: auto;
+    background-color: #1c2b35;
+    padding: 20px 0;
+}
 .active{
     color: gold;
 }
 
-.menu a{
-    text-decoration: none;
-    font-size: 17px;
-    cursor: pointer;
-    
-    margin-left: 35px;
-
-}
 a{
-    color: wheat;
+    text-decoration: none!important;
+    margin-right: 25px;
+    font-size: 17px;
 }
-.menu a:hover{
-    color: blue;
- 
+
+img {
+    height: 45px;
 }
+.logo{
+    margin-left: 20px;
+}
+
 .logOut-btn{
     padding: 10px  12px;
     background-color: #011624;
@@ -43,4 +47,12 @@ a{
     border:none;
     border-radius: 5px;
     margin-left: 10px;
+}
+@media screen and (max-width:858px) and (min-width:300px){
+.nav{
+    width: 85%;
+}    
+a{
+    text-align: center;
+}
 }

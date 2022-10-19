@@ -1,10 +1,11 @@
 .form-container{
-    width: 450px;
+    width: 420px;
     height: auto;
     border:  1px solid black;
     border-radius: 10px;
     margin: 30px auto;
     background-color: rgba(237, 234, 234, 0.558);
+    padding: 10px 0;
 
 }
 .form{
@@ -19,22 +20,22 @@ align-items: center;
 
 }
 
-.form-control label{
+.form-login label{
     display: block;
     margin-top: 20px;
     margin-bottom: 8px ;
     margin-left: 5px;
 }
-.form-control input {
+.form-login input {
     width: 350px;
-    height:40px;
+    height:43px;
     border-radius: 8px ;
     padding: 0 10px ;
     
 }
 .btn-submit{
-    width: 370px;
-    height:48px;
+    width: 350px;
+    height:43px;
     border-radius: 8px ;
     background-color: rgb(241, 225, 203);
     margin-top: 30px ;
@@ -43,15 +44,7 @@ align-items: center;
 .btn-submit:hover{
     background-color:rgb(213, 198, 178);
 }
-.btn-submit-google{
-    width: 370px;
-    height:48px;
-    border-radius: 8px ;
-    background-color: rgb(241, 225, 203);
-    margin-top: 0;
-    margin-bottom: 10px;
- 
-}
+
 .btn-submit-google:hover{
     background-color: rgb(213, 198, 178);
 
@@ -62,11 +55,13 @@ align-items: center;
 
 .google{
     width: 30px;
+    height: 30px;
 
 }
 .google-sign{
     border: 1px solid;
-    width: 80%;
+    width: 350px;
+    height: 41px;
     padding: 5px;
     border-radius: 8px;
     background-color: rgb(241, 225, 203);
